@@ -11,10 +11,11 @@ function addToCart(productName, price) {
 }
 
 function removeFromCart(index) {
-    total -= cart[index].price;
-    document.getElementById('cart-total').innerText = total.toFixed(2);
-    cart.splice(index, 1);
-    renderCart();
+    total -= cart[index].price; // Resta el precio del total
+    cart.splice(index, 1); // Elimina el ítem del carrito
+    document.getElementById('cart-total').innerText = total.toFixed(2); // Actualiza el total
+    saveCartToLocalStorage(); // Guarda el carrito actualizado en localStorage
+    renderCart(); // Renderiza el carrito
 }
 
 function renderCart() {
@@ -86,8 +87,6 @@ window.onload = () => {
     loadCartFromLocalStorage(); // Cargar carrito al iniciar
 };
 
-
-
 function closeModal(modalId) {
     document.getElementById(modalId).style.display = "none";
 }
@@ -99,4 +98,19 @@ function openCart() {
 
 function openCoffeeModal() {
     document.getElementById('coffeeModal').style.display = "block";
+}
+
+function redirectToLogin() {
+    window.location.href = "login.html"; // Cambia a la URL de tu página de login
+}
+
+function shareContent() {
+    const url = window.location.href; // URL de la página actual
+    const text = "¡Mira este increíble café!"; // Texto a compartir
+
+    // Ejemplo de compartir en Facebook
+    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`;
+    window.open(facebookUrl, '_blank');
+
+    // También puedes agregar opciones para otras redes sociales aquí
 }

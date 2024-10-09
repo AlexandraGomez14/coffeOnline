@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,6 +16,7 @@
             <img src="https://t3.ftcdn.net/jpg/05/60/17/66/360_F_560176615_cUua21qgzxDiLiiyiVGYjUnLSGnVLIi6.jpg" alt="Carrito" id="cart-icon" onclick="toggleCart()">
             <span id="cart-total">0.00</span>
         </div>
+	<button class="login-button" onclick="redirectToLogin()">Loguearse</button>
     </div>
 
     <div class="product-container">
@@ -22,7 +26,6 @@
     <p>$2.50</p>
     <button onclick="addToCart('Café Latte', 2.5)">Agregar al carrito</button>
     <button class="like-button" onclick="toggleLike('Café Latte')">❤️ Me Gusta</button>
-    <button class="share-button" onclick="shareProduct('Café Latte')">Compartir</button>
 </div>
 <div class="product-card">
     <img src="https://www.cafes-santacristina.com/sites/default/files/2023-09/capuchino.jpg" alt="Capuchino">
@@ -30,7 +33,6 @@
     <p>$3.00</p>
     <button onclick="addToCart('Capuchino', 3)">Agregar al carrito</button>
     <button class="like-button" onclick="toggleLike('Capuchino')">❤️ Me Gusta</button>
-    <button class="share-button" onclick="shareProduct('Capuchino')">Compartir</button>
 </div>
 <div class="product-card">
     <img src="https://imag.bonviveur.com/cafe-con-leche.jpg" alt="Café con Leche">
@@ -38,7 +40,6 @@
     <p>$2.75</p>
     <button onclick="addToCart('Café con Leche', 2.75)">Agregar al carrito</button>
     <button class="like-button" onclick="toggleLike('Café con Leche')">❤️ Me Gusta</button>
-    <button class="share-button" onclick="shareProduct('Café con Leche')">Compartir</button>
 </div>
 <div class="product-card">
     <img src="https://blogstudio.s3.theshoppad.net/coffeeheroau/ec178d83e5f597b162cda1e60cb64194.jpg" alt="Espresso">
@@ -46,7 +47,6 @@
     <p>$2.00</p>
     <button onclick="addToCart('Espresso', 2)">Agregar al carrito</button>
     <button class="like-button" onclick="toggleLike('Espresso')">❤️ Me Gusta</button>
-    <button class="share-button" onclick="shareProduct('Espresso')">Compartir</button>
 </div>
 <!-- Nuevos productos añadidos -->
 <div class="product-card">
@@ -55,7 +55,6 @@
     <p>$3.25</p>
     <button onclick="addToCart('Flat White', 3.25)">Agregar al carrito</button>
     <button class="like-button" onclick="toggleLike('Flat White')">❤️ Me Gusta</button>
-    <button class="share-button" onclick="shareProduct('Flat White')">Compartir</button>
 </div>
 <div class="product-card">
     <img src="https://excelso77.com/wp-content/uploads/2024/05/por-que-el-cafe-americano-se-llama-asi-te-lo-contamos.webp" alt="Café Americano">
@@ -63,7 +62,6 @@
     <p>$2.25</p>
     <button onclick="addToCart('Café Americano', 2.25)">Agregar al carrito</button>
     <button class="like-button" onclick="toggleLike('Café Americano')">❤️ Me Gusta</button>
-    <button class="share-button" onclick="shareProduct('Café Americano')">Compartir</button>
 </div>
 <div class="product-card">
     <img src="https://i.blogs.es/7fb3d0/affogato/1366_2000.jpg" alt="Affogato">
@@ -71,7 +69,6 @@
     <p>$4.00</p>
     <button onclick="addToCart('Affogato', 4)">Agregar al carrito</button>
     <button class="like-button" onclick="toggleLike('Affogato')">❤️ Me Gusta</button>
-    <button class="share-button" onclick="shareProduct('Affogato')">Compartir</button>
 </div>
 <div class="product-card">
     <img src="https://www.elmejornido.com/sites/g/files/jgfbjl316/files/srh_recipes/f31a037bae1a3d33885f399946921263.jpg" alt="Café de Coco">
@@ -79,14 +76,14 @@
     <p>$3.50</p>
     <button onclick="addToCart('Café de Coco', 3.5)">Agregar al carrito</button>
     <button class="like-button" onclick="toggleLike('Café de Coco')">❤️ Me Gusta</button>
-    <button class="share-button" onclick="shareProduct('Café de Coco')">Compartir</button>
+
 </div>
 
 
         <!-- Agrega más productos según sea necesario -->
     </div>
 
-   <!-- Modal del Carrito -->
+<!-- Modal del Carrito -->
 <div id="cart" class="cart-modal">
     <div class="cart-content">
         <span class="close" onclick="closeModal('cart')">&times;</span>
@@ -95,6 +92,7 @@
         <h3>Total: $<span id="cart-total">0.00</span></h3>
     </div>
 </div>
+
 
 <!-- Modal de Café -->
 <div id="coffeeModal" class="modal">

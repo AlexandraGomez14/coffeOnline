@@ -83,52 +83,75 @@ body, html {
     background-color: #218838;
 }
 
+
 /* Estilos para el carrito modal */
 .cart-modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
+    display: none; /* Ocultar por defecto */
+    position: fixed; /* Posición fija */
+    z-index: 1000; /* Asegúrate de que esté encima de otros elementos */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto; /* Desplazamiento automático si es necesario */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
 }
 
 .cart-content {
-    background-color: #fff;
-    margin: 10% auto;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 600px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff; /* Color de fondo del contenido */
+    margin: 10% auto; /* Centrado vertical y horizontal */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Esquinas redondeadas */
+    max-width: 600px; /* Ancho máximo */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra sutil */
 }
 
+/* Estilos para el encabezado del carrito */
 .cart-content h2 {
-    margin-bottom: 16px;
+    text-align: center; /* Centrar el texto */
+    margin-bottom: 20px; /* Espaciado inferior */
 }
 
-.cart-content ul {
-    list-style-type: none;
-    padding: 0;
+/* Estilos para los ítems en el carrito */
+#cart-items {
+    list-style: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+    border-collapse: collapse; /* Colapsar bordes */
+    width: 100%; /* Ancho completo */
 }
 
-.cart-content li {
-    margin: 8px 0;
+#cart-items li {
+    display: flex; /* Usar flexbox para alineación */
+    justify-content: space-between; /* Espacio entre nombre y precio */
+    padding: 10px; /* Espaciado interno */
+    border-bottom: 1px solid rgb(230, 230, 230); /* Línea inferior */
 }
 
-/* Botón cerrar */
+#cart-items li:last-child {
+    border-bottom: none; /* Sin borde para el último ítem */
+}
+
+/* Estilos para el total */
+#cart-total {
+    font-weight: bold; /* Negrita para destacar el total */
+    text-align: right; /* Alinear a la derecha */
+}
+
+/* Estilo para el botón de cerrar */
 .close {
-    cursor: pointer;
-    color: #aaa;
-    float: right;
-    font-size: 28px;
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    color: #aaa; /* Color del botón */
+    float: right; /* Alinear a la derecha */
+    font-size: 28px; /* Tamaño del texto */
 }
 
 .close:hover {
-    color: black;
+    color: black; /* Color al pasar el ratón */
 }
+
+
+
+
 
 /* Estilos para el modal de café */
 .modal {
@@ -185,3 +208,72 @@ body, html {
 .modal-footer button:hover {
     background-color: #0056b3;
 }
+
+
+.login-button {
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #007bff; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s; /* Transición suave al cambiar de color */
+    margin-left: 20px; /* Espacio a la izquierda del botón */
+}
+
+.login-button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el ratón */
+}
+
+
+
+.login-container {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.login-container button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #218838;
+}
+
+.login-image {
+    margin-top: 20px;
+    width: 120px; /* Tamaño bonito y ajustado */
+    height: 120px; /* Añadimos altura para mantener la proporción */
+    border-radius: 50%; /* Hace la imagen redonda */
+    object-fit: cover; /* Asegura que la imagen se recorte bien dentro del contenedor circular */
+}
+
