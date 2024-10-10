@@ -26,6 +26,7 @@
     <p>$2.50</p>
     <button onclick="addToCart('Café Latte', 2.5)">Agregar al carrito</button>
     <button class="like-button" onclick="toggleLike('Café Latte')">❤️ Me Gusta</button>
+	<button class="location-button" onclick="openLocationModal()">Ver Tiendas</button>
 </div>
 <div class="product-card">
     <img src="https://www.cafes-santacristina.com/sites/default/files/2023-09/capuchino.jpg" alt="Capuchino">
@@ -33,6 +34,7 @@
     <p>$3.00</p>
     <button onclick="addToCart('Capuchino', 3)">Agregar al carrito</button>
     <button class="like-button" onclick="toggleLike('Capuchino')">❤️ Me Gusta</button>
+	<button class="location-button" onclick="openLocationModal()">Ver Tiendas</button>
 </div>
 <div class="product-card">
     <img src="https://imag.bonviveur.com/cafe-con-leche.jpg" alt="Café con Leche">
@@ -40,6 +42,7 @@
     <p>$2.75</p>
     <button onclick="addToCart('Café con Leche', 2.75)">Agregar al carrito</button>
     <button class="like-button" onclick="toggleLike('Café con Leche')">❤️ Me Gusta</button>
+	<button class="location-button" onclick="openLocationModal()">Ver Tiendas</button>
 </div>
 <div class="product-card">
     <img src="https://blogstudio.s3.theshoppad.net/coffeeheroau/ec178d83e5f597b162cda1e60cb64194.jpg" alt="Espresso">
@@ -47,6 +50,7 @@
     <p>$2.00</p>
     <button onclick="addToCart('Espresso', 2)">Agregar al carrito</button>
     <button class="like-button" onclick="toggleLike('Espresso')">❤️ Me Gusta</button>
+	<button class="location-button" onclick="openLocationModal()">Ver Tiendas</button>
 </div>
 <!-- Nuevos productos añadidos -->
 <div class="product-card">
@@ -55,6 +59,7 @@
     <p>$3.25</p>
     <button onclick="addToCart('Flat White', 3.25)">Agregar al carrito</button>
     <button class="like-button" onclick="toggleLike('Flat White')">❤️ Me Gusta</button>
+	<button class="location-button" onclick="openLocationModal()">Ver Tiendas</button>
 </div>
 <div class="product-card">
     <img src="https://excelso77.com/wp-content/uploads/2024/05/por-que-el-cafe-americano-se-llama-asi-te-lo-contamos.webp" alt="Café Americano">
@@ -62,6 +67,7 @@
     <p>$2.25</p>
     <button onclick="addToCart('Café Americano', 2.25)">Agregar al carrito</button>
     <button class="like-button" onclick="toggleLike('Café Americano')">❤️ Me Gusta</button>
+	<button class="location-button" onclick="openLocationModal()">Ver Tiendas</button>
 </div>
 <div class="product-card">
     <img src="https://i.blogs.es/7fb3d0/affogato/1366_2000.jpg" alt="Affogato">
@@ -69,6 +75,7 @@
     <p>$4.00</p>
     <button onclick="addToCart('Affogato', 4)">Agregar al carrito</button>
     <button class="like-button" onclick="toggleLike('Affogato')">❤️ Me Gusta</button>
+	<button class="location-button" onclick="openLocationModal()">Ver Tiendas</button>
 </div>
 <div class="product-card">
     <img src="https://www.elmejornido.com/sites/g/files/jgfbjl316/files/srh_recipes/f31a037bae1a3d33885f399946921263.jpg" alt="Café de Coco">
@@ -76,6 +83,7 @@
     <p>$3.50</p>
     <button onclick="addToCart('Café de Coco', 3.5)">Agregar al carrito</button>
     <button class="like-button" onclick="toggleLike('Café de Coco')">❤️ Me Gusta</button>
+	<button class="location-button" onclick="openLocationModal()">Ver Tiendas</button>
 
 </div>
 
@@ -102,6 +110,34 @@
         <p id="modal-coffee-description"></p>
     </div>
 </div>
+
+<!-- Modal de Localización -->
+<!-- Modal de Localización -->
+<div id="locationModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('locationModal')">&times;</span>
+        <div style="display: flex;">
+            <!-- Mapa a la izquierda -->
+            <div style="flex: 1; margin-right: 20px;">
+                <iframe id="map-iframe" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d971500.6137741318!2d-90.51689727791557!3d13.699968274752428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6330a6b10e45f1%3A0x6dfed8d6ff01a3cf!2sEl%20Salvador!5e0!3m2!1ses!2ssv!4v1696887255633!5m2!1ses!2ssv"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <!-- Información sobre las tiendas a la derecha -->
+            <div style="flex: 1;">
+                <h2 id="store-info-title">Disponibilidad en Tiendas</h2>
+                <!-- Imagen del establecimiento -->	<br>
+                <ul>
+                    <li>Starbucks: Disponible en todas las sucursales.</li>
+                    <li>Coffee Cup: Disponible en la mayoría de las sucursales.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 
 
     <script src="app.js"></script>

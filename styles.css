@@ -277,3 +277,16 @@ body, html {
     object-fit: cover; /* Asegura que la imagen se recorte bien dentro del contenedor circular */
 }
 
+.modal-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modal img {
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+

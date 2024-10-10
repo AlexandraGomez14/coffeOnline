@@ -23,7 +23,7 @@ function renderCart() {
     cartItems.innerHTML = ''; // Limpiar el contenido actual del carrito
     cart.forEach((item, index) => {
         const listItem = document.createElement('li');
-        listItem.innerHTML = `${item.name} - $${item.price.toFixed(2)} <button onclick="removeFromCart(${index})">Eliminar</button>`;
+        listItem.innerHTML = `${item.name} - $${item.price.toFixed(2)} <button onclick="removeFromCart(${index})" class="login-button">Eliminar</button>`;
         cartItems.appendChild(listItem);
     });
 }
@@ -114,3 +114,10 @@ function shareContent() {
 
     // También puedes agregar opciones para otras redes sociales aquí
 }
+
+function openLocationModal(coffeeName, imageSrc) {
+    // Mostrar el modal
+    document.getElementById('locationModal').style.display = 'block';
+}
+
+
